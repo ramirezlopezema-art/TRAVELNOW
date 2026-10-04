@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TravelNow: experiencias de viaje simples, cercanas y memorables."
+    />
+    <title>TravelNow | Tu próxima aventura</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- CABECERA: contiene el logo, la navegación y el control de tema. -->
+    <header class="header">
+      <a class="logo" href="#inicio" aria-label="TravelNow, ir al inicio">TravelNow <span>✈</span></a>
+
+      <nav class="navbar" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <!-- Botón requerido para activar el modo oscuro con JavaScript. -->
+      <button id="btn-tema" class="btn-tema" type="button" aria-pressed="false">
+        🌙 Oscuro
+      </button>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero" aria-labelledby="titulo-principal">
+        <div class="hero-content">
+          <p class="eyebrow">VIAJA A TU RITMO</p>
+          <h1 id="titulo-principal">Descubre el mundo con nosotros</h1>
+          <p class="hero-text">Armamos escapadas sencillas, seguras y hechas para recordar.</p>
+          <a class="btn-primary" href="#destinos">Explorar destinos</a>
+        </div>
+      </section>
+
+      <section id="destinos" class="servicios" aria-labelledby="titulo-destinos">
+        <div class="section-heading">
+          <p class="eyebrow">PLANEA SIN COMPLICACIONES</p>
+          <h2 id="titulo-destinos">Nuestros servicios</h2>
+          <p>Todo lo esencial para empezar a imaginar tu próxima salida.</p>
+        </div>
+
+        <div class="grid-servicios">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎒</div>
+            <h3>Equipaje seguro</h3>
+            <p>Consejos claros para viajar ligero y mantener lo importante contigo.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🗺️</div>
+            <h3>Rutas únicas</h3>
+            <p>Itinerarios flexibles que combinan lugares conocidos y descubrimientos.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">✈️</div>
+            <h3>Vuelos económicos</h3>
+            <p>Opciones prácticas para llegar más lejos sin perder tiempo buscando.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto" aria-labelledby="titulo-contacto">
+        <div>
+          <p class="eyebrow">¿LISTO PARA SALIR?</p>
+          <h2 id="titulo-contacto">Tu aventura empieza hoy.</h2>
+        </div>
+        <a class="btn-secondary" href="mailto:hola@travelnow.test">Escríbenos</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 TravelNow. Viaja ligero, vive mucho.</p>
+    </footer>
+
+    <!-- El atributo defer espera a que el HTML esté listo antes de ejecutar el JavaScript. -->
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

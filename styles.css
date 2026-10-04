@@ -1,0 +1,310 @@
+:root {
+  --color-primario: #ff5a5f;
+  --color-oscuro: #222222;
+  --color-claro: #f7f7f7;
+  --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --color-superficie: #ffffff;
+  --color-suave: #fff0f0;
+  --sombra: 0 14px 32px rgba(34, 34, 34, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background-color: var(--color-claro);
+  color: var(--color-oscuro);
+  font-family: var(--fuente-principal);
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  align-items: center;
+  background-color: #222222;
+  color: #ffffff;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  min-height: 76px;
+  padding: 1rem clamp(1.25rem, 5vw, 4rem);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--color-primario);
+}
+
+.navbar {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.navbar a {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+  color: var(--color-primario);
+}
+
+.btn-tema {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-tema:hover,
+.btn-tema:focus-visible {
+  background-color: white;
+  color: var(--color-oscuro);
+}
+
+.hero {
+  align-items: center;
+  background:
+    linear-gradient(130deg, rgba(15, 22, 40, 0.86), rgba(255, 90, 95, 0.5)),
+    radial-gradient(circle at 75% 25%, #5fc8d5 0, #28567c 35%, #17283b 70%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  min-height: min(650px, calc(100vh - 76px));
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--color-primario);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.75rem;
+}
+
+.hero .eyebrow {
+  color: #ffd5d6;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.7rem);
+  letter-spacing: -0.055em;
+}
+
+.hero-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin: 1.25rem auto 2rem;
+  max-width: 580px;
+}
+
+.btn-primary,
+.btn-secondary {
+  background-color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 800;
+  padding: 0.8rem 1.25rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: #df4248;
+  border-color: #df4248;
+  transform: translateY(-2px);
+}
+
+.servicios {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: clamp(4rem, 8vw, 6.5rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.section-heading {
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+}
+
+.section-heading h2,
+.contacto h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.045em;
+  margin-bottom: 0.7rem;
+}
+
+.grid-servicios {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid rgba(34, 34, 34, 0.08);
+  border-radius: 18px;
+  box-shadow: var(--sombra);
+  padding: 1.7rem;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease,
+    box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  align-items: center;
+  background: var(--color-suave);
+  border-radius: 12px;
+  display: flex;
+  font-size: 1.6rem;
+  height: 50px;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  width: 50px;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.contacto {
+  align-items: center;
+  background-color: var(--color-oscuro);
+  color: #ffffff;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 10vw, 10rem);
+}
+
+.contacto .eyebrow {
+  color: #ffd5d6;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: #ffffff;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #222222;
+}
+
+footer {
+  background-color: #181818;
+  color: #c9c9c9;
+  font-size: 0.9rem;
+  padding: 1.3rem 1.25rem;
+  text-align: center;
+}
+
+/* Cuando el body tiene dark-theme, la interfaz usa variables de alto contraste. */
+body.dark-theme {
+  --color-claro: #121212;
+  --color-oscuro: #e0e0e0;
+  --color-superficie: #1e1e1e;
+  --color-suave: #302326;
+  --sombra: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Las tarjetas cambian de superficie para no quedarse blancas en modo oscuro. */
+body.dark-theme .card {
+  background-color: #1e1e1e;
+  border-color: #444444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .contacto {
+  background-color: #080808;
+}
+
+/* Al pasar sobre el botón oscuro, conservamos contraste suficiente sobre el fondo blanco. */
+body.dark-theme .btn-tema:hover,
+body.dark-theme .btn-tema:focus-visible {
+  color: #222222;
+}
+
+@media (max-width: 760px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .navbar {
+    order: 3;
+    width: 100%;
+  }
+
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    gap: 0.75rem;
+  }
+
+  .btn-tema {
+    padding: 7px 10px;
+  }
+
+  .navbar {
+    font-size: 0.88rem;
+    justify-content: space-between;
+  }
+}
